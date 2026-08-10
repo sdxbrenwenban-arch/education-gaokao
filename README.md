@@ -25,3 +25,27 @@
 - 内部工作库（含未脱敏姓名）不公开；如需合作请通过 Issues 联系
 - 西藏与港澳台未纳入（考生数量少/情况特殊）
 - 数据仅供研究使用，引用请注明：高考状元数据库 v1.0（2026）
+
+## 引用方式
+
+### 数据引用
+> 高考状元数据库 v1.0（2026）。中国 30 省高考状元数据，1956–2026 年，2598 条记录。URL: https://github.com/sdxbrenwenban-arch/education-gaokao
+
+BibTeX:
+```bibtex
+@misc{gaokao_top_scorer_2026,
+  title={中国高考状元数据库 v1.0},
+  author={sdxbrenwenban-arch},
+  year={2026},
+  howpublished={\url{https://github.com/sdxbrenwenban-arch/education-gaokao}},
+  note={30 省, 2598 条记录, 1956--2026}
+}
+```
+
+### 论文引用
+> 中国高考状元性别分布的描述性证据：基于 30 省 2598 条记录的新数据库（2000–2026）。工作论文 v1.1，2026-08。
+
+## 版本
+
+- v1.0（2026-08-09）：初始发布，30 省 2598 条
+- v1.0.1（2026-08-10）：H3 喜报数据补充（school_news 73+ 行）
