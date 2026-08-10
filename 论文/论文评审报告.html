@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>论文评审报告：中国高考状元的性别分布与可见度变迁</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1a1d24;--muted:#667085;--line:#e4e7ec;--accent:#3b5bdb;--green:#12b76a;--amber:#f79009;--red:#f04438;--radius:14px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.75;padding:32px 16px;}
+  .wrap{max-width:960px;margin:0 auto;}
+  header{background:linear-gradient(135deg,#101828 0%,#7a2e2e 100%);color:#fff;border-radius:var(--radius);padding:32px;margin-bottom:24px;}
+  header h1{font-size:22px;font-weight:700;margin-bottom:8px;}
+  header p{color:#e8c9c9;font-size:14px;}
+  h2{font-size:18px;margin:30px 0 12px;padding-left:12px;border-left:4px solid var(--accent);}
+  h3{font-size:15px;margin:18px 0 8px;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;font-size:13px;margin:10px 0 16px;}
+  th{background:#f0f2f7;text-align:left;padding:8px 12px;font-size:12px;color:#475467;border-bottom:1px solid var(--line);}
+  td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:12px 0;}
+  .crit{background:#fef3f2;border:1px solid #f7c6c0;border-radius:10px;padding:14px 16px;font-size:13.5px;color:#8a2f24;margin:10px 0;}
+  .maj{background:#fff8e6;border:1px solid #f2dfa8;border-radius:10px;padding:14px 16px;font-size:13.5px;color:#7a5b0e;margin:10px 0;}
+  .min{background:#eef2ff;border:1px solid #c9d4f8;border-radius:10px;padding:14px 16px;font-size:13.5px;color:#2f46a5;margin:10px 0;}
+  .decision{background:#1a1d24;color:#fff;border-radius:var(--radius);padding:22px 24px;margin:16px 0;}
+  .decision b{color:#f0a500;}
+  ul{margin:6px 0 10px 22px;} li{margin:5px 0;font-size:13.5px;color:#344054;}
+  .score{font-size:22px;font-weight:800;}
+  footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>学术评审报告（模拟同行评议）</h1>
+  <p>论文：《中国高考状元的性别分布与可见度变迁（2000–2026）》· 初稿 v0.2 · 评审模式：full（5 人评审团）</p>
+</header>
+
+<h2>总评：编辑决定 = <span style="color:#f0a500">MAJOR REVISION（重大修改）</span></h2>
+<div class="decision">
+  评审团一致认可<b>数据库构建是真实贡献</b>，但一致质疑<b>论文定位与论证链条</b>：描述性事实的呈现方式、性别确认偏差对核心发现的影响、以及"贡献依赖榜样效应而榜样效应检验为 null"的张力。<br>
+  建议方向：<b>重构为"数据论文 + 描述性事实"定位</b>（突出数据库公共品价值），或将 H3 母校效应作为第二支柱补强因果证据。<br>
+  <b>评分（0-100）</b>：原创性 68 / 方法严谨 55 / 文献 58 / 重要性 70 / 可复现 82 / 表述 72
+</div>
+
+<h2>评审报告 1 — EIC（主编视角）</h2>
+<div class="card">
+<p><b>期刊适配</b>：适合 China Economic Review、Economics of Education Review 或 Journal of Comparative Economics 的描述性/数据类投稿。以当前形态投因果导向期刊（JDE/JHE）会被直接拒稿。</p>
+<p><b>原创性</b>：全国尺度的状元数据库前所未有，七个描述性事实（尤其文理 2:1 分化、省际 13 倍悬殊、匿名化时间线）具有原创价值。</p>
+<p><b>主要问题</b>：</p>
+<div class="maj"><b>[MAJOR] 定位模糊</b>：摘要与引言使用"榜样效应""可见度冲击"等因果暗示语言，但论文实际只提供描述与相关性检验。读者期待落差大。建议全文重写为"事实-数据库"定位，或补充因果支柱。</div>
+<div class="maj"><b>[MAJOR] 摘要过长且承诺过多</b>：摘要 400+ 字承载了描述、检验、政策三段内容，但"政策权衡"部分没有对应证据支撑。</div>
+<div class="min"><b>[MINOR]</b> 建议给出数据库的学术引用格式与下载渠道（公共品声明），提升可引用性。</div>
+</div>
+
+<h2>评审报告 2 — R1（方法论）</h2>
+<div class="card">
+<p><b>认可</b>：数据质量控制流程（四层核验、双源交叉、初筛回测 91%/89%、抽检 4/4）在描述性论文中属于优秀水平；新浪独立核验 172 条零错误是加分项。</p>
+<p><b>关键问题</b>：</p>
+<div class="crit"><b>[CRITICAL] 性别确认偏差威胁核心发现</b>：确认率仅 60.7%，且 NA 非随机——2000 年前无报道、2018 后禁炒封锁。F2"禁炒后登顶率下降 5–7pp"与确认偏差方向完全一致（禁炒后能确认性别的样本偏向有报道者），该发现目前<b>不可解释为效应</b>，甚至不应作为主要事实呈现。至少需要：① 以"女状元份额（NA 视为非女）"做上下界稳健性；② 用 2004–2015（确认率稳定期）做主分析，2018 后单独标注。</div>
+<div class="crit"><b>[CRITICAL] 传染检验的报告方式误导</b>：混合样本 β=0.131(t=3.65) 被论文自己认定为伪相关，却仍作为表头结果展示；文科负相关解读为"均值回归"是事后解释，需检验高基线机制的替代（如周期性）。且无功效分析——828 个单元、二值因变量，最小可检测效应未报告。</div>
+<div class="maj"><b>[MAJOR] 滚动均值与年份边界</b>：图 1 三年滚动均值在端点行为与 2018 断点处平滑掉了突变；建议同时报告单年值。</div>
+<div class="maj"><b>[MAJOR] 并列记录处理</b>：446 条并列中"女性份额"定义未说明（fem_share 均值 vs 虚拟变量），且"跨性别同分=0"的陈述需要明确样本范围（已确认性别内）。</div>
+<div class="min"><b>[MINOR]</b> 复现性：脚本未随文提供；建议附录化。</div>
+</div>
+
+<h2>评审报告 3 — R2（领域）</h2>
+<div class="card">
+<p><b>文献覆盖缺口</b>：</p>
+<div class="maj"><b>[MAJOR]</b> 榜样效应文献只引了 4 篇（Qin/Beaman/Breda/Carrell），缺少：女性学业表现的中国文献（如 Li, Han &amp; Liu 等）、同伴效应综述（Sacerdote 2011）、成绩排名公开性的研究（如 Bursztyn 等社会比较文献）、媒体报道与行为（Gentzkow &amp; Shapiro 框架）——这些对"可见度"概念化至关重要。</div>
+<div class="maj"><b>[MAJOR] 理论框架缺位</b>：论文没有提出可检验的假设层级（H1-H4 在开题中有，正文中消失）。"为什么文科登顶率是 76% 而不是 50%""为什么理科是 39%"没有理论解释——描述性论文也需要 organizing framework。</div>
+<div class="maj"><b>[MAJOR] 与 Qin et al. 的对话不足</b>：作为动机来源，本文应明确说明"省级证据对班级机制意味着什么"——目前仅一节泛泛而谈。</div>
+<div class="min"><b>[MINOR]</b> 参考文献格式不统一（部分无卷期页码）。</div>
+</div>
+
+<h2>评审报告 4 — R3（跨学科视角）</h2>
+<div class="card">
+<p><b>认可</b>：禁炒令时间线（青海 2018 → 京津辽 2026）是媒体研究/公共政策领域有吸引力的自然实验素材；新疆双轨制案例独特。</p>
+<p><b>问题</b>：</p>
+<div class="maj"><b>[MAJOR] "可见度"未被测量</b>：论文把"匿名化"当作可见度代理，但从未直接测量媒体曝光量（报道篇数、版面、百度指数）。若无测量，禁炒令分析停留在描述层面；建议至少用报道篇数做粗糙代理（论文已提到百度指数 2011+，未使用）。</div>
+<div class="maj"><b>[MAJOR] 政策含义越界</b>：7.2 节"政策权衡"暗示禁炒令可能牺牲榜样激励，但论文无任何证据表明省级女状元可见度影响女生行为——此段应弱化为"研究议程"而非"含义"。</div>
+<div class="min"><b>[MINOR]</b> 可补充：状元性别比例与省域性别平等指标（如教育性别比）的相关性分析，增强政策读者价值。</div>
+</div>
+
+<h2>评审报告 5 — DA（魔鬼代言人）</h2>
+<div class="card">
+<p><b>最强反驳（最强反论证）</b>：这篇论文的贡献链条是"数据库 → 描述性事实 → 暗示榜样机制"。但链条在第二环断裂：如果核心描述性事实（登顶率 76% vs 39%）被性别确认偏差部分驱动，那么剩余的新信息是什么？而一旦承认"没有因果识别"，本文就退化为"一份带统计的名单"——除非数据库本身作为公共品被承认价值。讽刺的是，论文最重要的资产（2598 条数据）与最重要的缺陷（无法因果识别）来自同一个事实：<b>状元是极端的、选择性的、非随机的观测</b>。基于极端值的描述无法外推至分布的主体，这正是 Qin et al. 用班级样本的原因。</p>
+<p><b>问题清单</b>：</p>
+<div class="crit"><b>[CRITICAL] "So what?" 测试</b>：若读者问"登顶率 76% vs 39% 意味着什么？"，论文给出的答案（榜样效应空间）需要因果证据，而论文自己没有。必须重新定位贡献来源。</div>
+<div class="crit"><b>[CRITICAL] 选择偏差的自指性</b>：2018 后"登顶率下降"与"匿名化"高度共线——处理（禁炒）与结果测量（确认率）被同一制度改变，无法区分。F2 作为独立发现不成立。</div>
+<div class="maj"><b>[MAJOR] 樱桃采摘风险</b>：省际差异选取"最低3省/最高3省"展示，未报告全分布；江西 4.3% 基于确认样本可能极小（需报告 n）。</div>
+<div class="maj"><b>[MAJOR] null result 的发表价值辩护不足</b>：传染 null 若作为主要结果，需要论证其为什么重要（如：排除顶端传染→支持中分布机制），目前只是"未发现"。</div>
+<div class="min"><b>[MINOR]</b> 新疆双轨近似样本（12 对）过小，作为"辅助识别"仍显薄弱，建议移入附录或删除。</div>
+</div>
+
+<h2>编辑决策信与修改路线图（按优先级）</h2>
+<table>
+  <tr><th>优先级</th><th>修改项</th><th>对应评审</th></tr>
+  <tr><td><b>P0</b></td><td>重新定位：标题与摘要改为"数据库 + 描述性事实"定位，删除/弱化因果暗示；或将 H3 母校效应并入作为因果支柱</td><td>EIC, DA</td></tr>
+  <tr><td><b>P0</b></td><td>性别确认偏差处理：主分析限 2004–2015 确认率稳定期；2018 后单独标注"数据限制"；上下界稳健性（NA 视为非女/全部视为女）</td><td>R1, DA</td></tr>
+  <tr><td><b>P1</b></td><td>传染检验重写：删除混合样本误导性结果；加功效分析；文科负相关检验均值回归 vs 周期性替代解释；报告单年值+滚动值</td><td>R1</td></tr>
+  <tr><td><b>P1</b></td><td>补文献：同伴效应综述、中国女生学业表现文献、社会比较/排名公开性、媒体曝光测量文献</td><td>R2</td></tr>
+  <tr><td><b>P1</b></td><td>补可见度测量：报道篇数（至少 5 省试点）作为匿名化代理的补充</td><td>R3</td></tr>
+  <tr><td><b>P2</b></td><td>省际差异展示全分布（图 2 已接近）；标注各省确认样本量</td><td>DA</td></tr>
+  <tr><td><b>P2</b></td><td>新疆双轨移附录；并列定义澄清；脚本附录化</td><td>R1, DA</td></tr>
+  <tr><td><b>P2</b></td><td>政策段弱化为研究议程；摘要压缩至 250 字内；参考文献格式统一</td><td>EIC, R3</td></tr>
+</table>
+
+<div class="card">
+<p><b>评审团共识</b>：数据库（30 省 2598 条 + 制度面板 + 性别初筛）是值得发表的资产；建议以"数据描述论文"或"AER P&amp;P 风格短论文"为最终形态，把因果识别（H3 母校效应/前两名 RDD）留给后续论文。这样既保住了贡献，又规避了当前识别短板。</p>
+</div>
+
+<footer>评审模式：full（5 人独立评审 + 综合裁决）· 技能：academic-paper-reviewer v1.9.1 · 2026-08-10</footer>
+</div>
+</body>
+</html>

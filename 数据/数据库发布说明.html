@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中国高考状元数据库 v1.0 — 发布说明</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1a1d24;--muted:#667085;--line:#e4e7ec;--accent:#3b5bdb;--green:#12b76a;--amber:#f79009;--red:#f04438;--radius:14px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.75;padding:32px 16px;}
+  .wrap{max-width:960px;margin:0 auto;}
+  header{background:linear-gradient(135deg,#101828 0%,#1d3a5f 100%);color:#fff;border-radius:var(--radius);padding:32px;margin-bottom:24px;}
+  header h1{font-size:22px;font-weight:700;margin-bottom:8px;}
+  header p{color:#c7cbe0;font-size:14px;}
+  h2{font-size:17px;margin:28px 0 12px;padding-left:12px;border-left:4px solid var(--accent);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;font-size:13px;margin:10px 0 16px;}
+  th{background:#f0f2f7;text-align:left;padding:8px 12px;font-size:12px;color:#475467;border-bottom:1px solid var(--line);}
+  td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:13px;margin:14px 0;}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px;text-align:center;}
+  .metric .num{font-size:26px;font-weight:800;color:var(--accent);}
+  .metric .lbl{font-size:12px;color:var(--muted);margin-top:3px;}
+  .warn{background:#fef3f2;border:1px solid #f7c6c0;border-radius:10px;padding:12px 15px;font-size:13px;color:#8a2f24;margin:12px 0;}
+  .ok{background:#e6f8f0;border:1px solid #b8e6d0;border-radius:10px;padding:12px 15px;font-size:13px;color:#0e6b4a;margin:12px 0;}
+  code{background:#f0f2f7;border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:12px;}
+  footer{margin-top:32px;color:var(--muted);font-size:12px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>中国高考状元数据库 v1.0</h1>
+  <p>30 省级行政区 · 2598 条 · 1956–2026（2000–2026 为主）· 2026-08-09 发布</p>
+</header>
+
+<div class="metrics">
+  <div class="metric"><div class="num">2598</div><div class="lbl">记录总数</div></div>
+  <div class="metric"><div class="num">30</div><div class="lbl">省级行政区</div></div>
+  <div class="metric"><div class="num">60.7%</div><div class="lbl">性别确认率</div></div>
+  <div class="metric"><div class="num">446</div><div class="lbl">并列记录（断点观测）</div></div>
+  <div class="metric"><div class="num">479</div><div class="lbl">含加分标记（双轨）</div></div>
+  <div class="metric"><div class="num">2142</div><div class="lbl">含分数记录</div></div>
+</div>
+
+<h2>覆盖范围</h2>
+<p>不含港澳台与西藏（西藏因考生数量少且情况特殊未纳入）。时间跨度 1956–2026：上海 1956 年陈陈（数理化三科满分）为最早记录；2000–2026 各省覆盖完整度最高。轨道包含：文/理、外语类、3+X 大综合（不分科）、新高考物理类/历史类、3+3 不分科、新疆单列类/普通类、吉林汉语言。</p>
+
+<h2>字段字典（核心）</h2>
+<table>
+  <tr><th>字段</th><th>说明</th></tr>
+  <tr><td>province / year / track</td><td>省 / 年 / 轨道（理·文·外·综·不分·物理类·历史类）</td></tr>
+  <tr><td>name_anon</td><td>脱敏姓名（首字+*；少数民族名保留结构）</td></tr>
+  <tr><td>gender</td><td>F 女 / M 男 / NA 待确认（确认方式见下）</td></tr>
+  <tr><td>total_score</td><td>总分（报道口径，含加分；<b>跨省比较须先标准化</b>）</td></tr>
+  <tr><td>is_tie / is_bonus_adj</td><td>并列标记 / 含加分标记（裸分在 note）</td></tr>
+  <tr><td>college / note</td><td>录取院校 / 分科成绩、复读、移民、保送、匿名化等备注</td></tr>
+</table>
+
+<h2>分数制度口径（分析前必读）</h2>
+<table>
+  <tr><th>省份/时期</th><th>制度</th><th>满分</th></tr>
+  <tr><td>河南 1994–2000 · 山东 1996–2000 · 海南</td><td>标准分制</td><td>900（海南 2013 起含会考可超 900）</td></tr>
+  <tr><td>浙江 2009–2016</td><td>3+X+自选模块</td><td>810</td></tr>
+  <tr><td>江苏 2008–2020</td><td>语数外+附加+等级</td><td>480</td></tr>
+  <tr><td>上海 2017 起</td><td>3+3 赋分</td><td>660</td></tr>
+  <tr><td>广东 2007–2009</td><td>3+X+文理基础</td><td>750</td></tr>
+  <tr><td>云南 2019 起</td><td>3+X+量化成绩</td><td>772</td></tr>
+  <tr><td>其余（多数）</td><td>全国卷/自主命题</td><td>750</td></tr>
+</table>
+<div class="warn"><b>关键提醒</b>：合并跨省分数前必须按省-年-轨道标准化（如 Z-score）。900 制、810 制、480 制、660 制不可直接比较。</div>
+
+<h2>性别字段确认方式与局限</h2>
+<div class="ok">
+  确认四通道：① 原文/报道代词 ② 官方档案（教育在线"性别：男"式） ③ 数据驱动姓名特征初筛（回测可判者女 91.4%/男 88.7%，note 标注"初筛确认"） ④ 少数民族名语义（维吾尔名 Adil 等）。质量控制：20% 分层抽检 104 条、外部验证 4/4、纠正入库遗漏 2 处。
+</div>
+<p><b>NA（约 39%）构成</b>：2000 年前无媒体报道代词 + 2000 后中性名无代词 + 禁炒期匿名记录。主分析建议仅用已确认样本或对 NA 做稳健性检验。</p>
+
+<h2>已知局限</h2>
+<ul>
+  <li>2000 年前部分省份年份缺失（媒体缺失）</li>
+  <li>2018 年后多省禁炒：2021 起北京/天津等以"据称/存疑/匿名"为主（note 已标注可信度分级）</li>
+  <li>少数民族双轨省份（新疆/吉林）口径复杂，需分轨道分析</li>
+  <li>高考移民/借读（青海 18 条外省籍贯）可能污染学校-省份关联</li>
+</ul>
+
+<h2>引用建议</h2>
+<p><code>高考状元数据库 v1.0（2026），30 省 2598 条</code>。数据来源：知乎专栏"未来的每一天"系列、用户提供（海南）、中国教育在线盘点交叉核验、新浪/搜狐/学信网抽查验证。质量控制记录见 <code>采集日志.md</code>。</p>
+
+<footer>中国高考状元数据库 v1.0 · 2026-08-09 · 详细文档见 README.md</footer>
+</div>
+</body>
+</html>

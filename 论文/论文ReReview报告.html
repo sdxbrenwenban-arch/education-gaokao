@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Re-Review 验证报告：论文 v0.3</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--ink:#1a1d24;--muted:#667085;--line:#e4e7ec;--accent:#3b5bdb;--green:#12b76a;--amber:#f79009;--red:#f04438;--radius:14px;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.75;padding:32px 16px;}
+  .wrap{max-width:920px;margin:0 auto;}
+  header{background:linear-gradient(135deg,#101828 0%,#1d3a5f 100%);color:#fff;border-radius:var(--radius);padding:30px;margin-bottom:24px;}
+  header h1{font-size:21px;font-weight:700;margin-bottom:8px;}
+  header p{color:#c7cbe0;font-size:14px;}
+  h2{font-size:17px;margin:26px 0 12px;padding-left:12px;border-left:4px solid var(--accent);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;font-size:13px;margin:10px 0 16px;}
+  th{background:#f0f2f7;text-align:left;padding:8px 12px;font-size:12px;color:#475467;border-bottom:1px solid var(--line);}
+  td{padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .ok{background:#e6f8f0;border:1px solid #b8e6d0;border-radius:10px;padding:13px 15px;font-size:13.5px;color:#0e6b4a;margin:10px 0;}
+  .warn{background:#fff8e6;border:1px solid #f2dfa8;border-radius:10px;padding:13px 15px;font-size:13.5px;color:#7a5b0e;margin:10px 0;}
+  .crit{background:#fef3f2;border:1px solid #f7c6c0;border-radius:10px;padding:13px 15px;font-size:13.5px;color:#8a2f24;margin:10px 0;}
+  .decision{background:#1a1d24;color:#fff;border-radius:var(--radius);padding:20px 22px;margin:14px 0;}
+  .decision b{color:#12b76a;}
+  footer{margin-top:30px;color:var(--muted);font-size:12px;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Re-Review 验证报告（第二轮）</h1>
+  <p>论文 v0.2 → v0.3 · 验证小组：EIC + 方法 + 综合 · 模式：re-review（R&amp;R 追踪矩阵）</p>
+</header>
+
+<h2>追踪矩阵（第一轮意见 → 验证状态）</h2>
+<table>
+  <tr><th>第一轮意见</th><th>v0.3 落实情况</th><th>验证</th></tr>
+  <tr><td>P0 定位重构（标题/摘要去因果暗示）</td><td>标题改为"描述性证据"，引言声明"不声称因果识别"</td><td style="color:var(--green)"><b>✅ 已解决</b></td></tr>
+  <tr><td>P0 确认偏差处理</td><td>三口径（确认内/下界/上界）全报告；主分析限 2004–2015；禁炒对比区间化</td><td style="color:var(--green)"><b>✅ 已解决</b></td></tr>
+  <tr><td>P1 传染检验重写</td><td>删除混合伪相关；增加功效分析（MDE 0.06–0.07）；文科负相关标注均值回归一致</td><td style="color:var(--green)"><b>✅ 已解决</b></td></tr>
+  <tr><td>P1 文献补充</td><td>新增 Sacerdote 2011、Bursztyn &amp; Jensen 2015</td><td style="color:var(--amber)"><b>⚠️ 部分</b>：中国女生学业表现、媒体曝光文献仍缺（列为 M2）</td></tr>
+  <tr><td>P1 可见度测量</td><td>6.3 研究议程加入报道篇数计划</td><td style="color:var(--amber)"><b>⚠️ 部分</b>：已规划未实施（可接受为 roadmap）</td></tr>
+  <tr><td>P2 新疆双轨移附录 / 政策弱化 / 局限强化</td><td>全部落实</td><td style="color:var(--green)"><b>✅ 已解决</b></td></tr>
+</table>
+
+<h2>本轮新发现问题（re-review 独立检查）</h2>
+<div class="crit"><b>[已修正] 事实性错误（M1）</b>：v0.3 原文"文科区间整体位于理科区间之上"不成立——文科下界 50.6% &lt; 理科上界 56.3%，区间存在重叠。已改为逐口径比较（下界 50.6&gt;25.3、上界 83.7&gt;56.3、确认内 76.6&gt;39.3），并明示重叠区间。</div>
+<div class="warn"><b>[残留-M2] 文献缺口</b>：中国女生学业表现文献（如关于数理能力性别差距的中国证据）与媒体曝光-行为文献仍未补入；建议投稿前补齐 2–3 篇。</div>
+<div class="warn"><b>[残留-M3] 图表口径</b>：图 1 仅展示确认样本内轨迹，未含上下界区间带；建议增加区间带版本（对数据论文尤为重要）。</div>
+<div class="warn"><b>[残留-M4] 摘要口径</b>：摘要中"呈下降迹象"表述已随正文修正，但摘要仍建议压缩至 250 字内并同步区间口径说明。</div>
+
+<h2>第二轮编辑决定</h2>
+<div class="decision">
+  <b>MINOR REVISION（小修）</b> —— 定位问题与确认偏差问题已实质解决；残余问题为文献补齐、图表区间带、摘要压缩三项技术性修改，不涉及论证结构。<br>
+  作为"数据论文 + 描述性事实"形态，本稿已具备投稿条件（目标：China Economic Review 数据/描述类栏目，或 Economics of Education Review 短论文栏目）。
+</div>
+
+<h2>投稿前清单（M2–M4）</h2>
+<ul>
+  <li>补齐中国女生学业表现文献 1–2 篇（如关于 STEM 性别差距的中国研究）+ 媒体曝光文献 1 篇</li>
+  <li>图 1 增加上下界区间带版本</li>
+  <li>摘要压缩至 250 字内，同步"区间口径"说明</li>
+  <li>（可选）脚本与数据附录打包为公开仓库</li>
+</ul>
+
+<footer>Re-Review · 技能：academic-paper-reviewer v1.9.1（re-review 模式）· 2026-08-10</footer>
+</div>
+</body>
+</html>
